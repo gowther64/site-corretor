@@ -16,9 +16,11 @@ function buscar() {
 function enviarWhats(event) {
   event.preventDefault();
 
-  let nome = document.querySelector('input').value;
-  let email = document.querySelectorAll('input')[1].value;
-  let msg = document.querySelector('textarea').value;
+  const form = event.target;
+
+  let nome = form.querySelector('input[type="text"]').value;
+  let email = form.querySelector('input[type="email"]').value;
+  let msg = form.querySelector('textarea').value;
 
   let texto = `Olá, meu nome é ${nome}%0AEmail: ${email}%0AMensagem: ${msg}`;
 
