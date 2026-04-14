@@ -1,18 +1,34 @@
-// BOTÃO HERO
-const botaoHero = document.querySelector(".hero button");
-
-botaoHero.addEventListener("click", () => {
-    document.querySelector(".busca").scrollIntoView({
-        behavior: "smooth"
-    });
+// SCROLL SUAVE
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });
 
-// SIMULAÇÃO DE BUSCA
-const botaoBusca = document.querySelector(".busca button");
+// BUSCA
+function buscar() {
+  alert("Busca em desenvolvimento");
+}
 
-botaoBusca.addEventListener("click", () => {
-    const cidade = document.querySelectorAll(".busca input")[0].value;
-    const tipo = document.querySelectorAll(".busca input")[1].value;
+// FORM WHATS
+function enviarWhats(event) {
+  event.preventDefault();
 
-    alert(`Buscando imóveis em ${cidade} do tipo ${tipo}`);
+  let nome = document.querySelector('input').value;
+  let email = document.querySelectorAll('input')[1].value;
+  let msg = document.querySelector('textarea').value;
+
+  let texto = `Olá, meu nome é ${nome}%0AEmail: ${email}%0AMensagem: ${msg}`;
+
+  window.open(`https://wa.me/5547996730923?text=${texto}`, '_blank');
+}
+
+// DARK MODE
+const toggle = document.getElementById("darkModeToggle");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  toggle.innerHTML = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
 });

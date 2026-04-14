@@ -1,82 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elder Schauffert Corretor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elder Schauffert | Corretor</title>
 
-<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="topo">
 
-<!-- TOPO -->
-<div class="topo">
-    <span>CRECI/SC 00000-A</span>
-    <span>(47) 9 0000-0000</span>
-    <span>encontre rapido</span>
-    <span>facebook</span>
-    <span>instagram</span>
-    <span>imoveis favoritos</span>
-</div>
-
-<!-- NAVBAR -->
 <header>
-    <nav class="navbar">
-        <h1>Elder Schauffert</h1>
-        <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre mim</a></li>
-            <li><a href="#">vendas</a></li>
-            <li><a href="#">aluguel</a></li>
-            <li><a href="#">noticias</a></li>
-            <li><a href="#">contato</a></li>
-            <li><a href="#">compartilhar</a></li>
-            <li><a href="#">noticias</a></li>
-        </ul>
-    </nav>
+  <div class="topo">
+    📍 Itajaí | 📞 (47) 99673-0923
+  </div>
+
+  <nav>
+    <h2>Elder Schauffert</h2>
+
+    <ul>
+      <li><a href="#topo">Início</a></li>
+      <li><a href="#imoveis">Imóveis</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <button id="darkModeToggle">🌙</button>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <h2>Imoveis em Itajaí e região</h2>
-    <p></p>
-    <button>Buscar agora</button>
+<section class="banner">
+  <div class="overlay">
+    <h1>Encontre seu imóvel ideal em Itajaí</h1>
+    <p>Atendimento rápido direto no WhatsApp</p>
+    <a href="#imoveis" class="btn">Ver imóveis</a>
+  </div>
 </section>
 
-<!-- BUSCA -->
 <section class="busca">
-    <input type="text" placeholder="Cidade">
-    <input type="text" placeholder="Tipo">
-    <button>Buscar</button>
+  <input type="text" placeholder="Cidade">
+  <input type="text" placeholder="Tipo">
+  <button onclick="buscar()">Buscar</button>
 </section>
 
-<!-- IMOVEIS -->
-<section class="imoveis">
-    <h2>Imóveis em destaque</h2>
+<section id="imoveis" class="imoveis">
+  <h2>Imóveis em destaque</h2>
 
-    <div class="grid">
+  <div class="cards">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e">
-            <h3>Casa em Itajaí</h3>
-            <p>R$ 500.000</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-            <h3>Apartamento</h3>
-            <p>R$ 350.000</p>
-        </div>
-
-        <div class="card">
-            <img src="https://img.olx.com.br/images/77/774666383594291.jpg">
-            <h3>Casa com piscina</h3>
-            <p>R$ 800.000</p>
-        </div>
-
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+      <h3>Casa em Itajaí</h3>
+      <p>3 quartos • 2 banheiros</p>
+      <span>R$ 450.000</span>
+      <a href="https://wa.me/5547996730923" class="btn" target="_blank">Tenho interesse</a>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688">
+      <h3>Apartamento moderno</h3>
+      <p>2 quartos • Centro</p>
+      <span>R$ 320.000</span>
+      <a href="https://wa.me/5547996730923" class="btn" target="_blank">Tenho interesse</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <h3>Casa de luxo</h3>
+      <p>Piscina • Área gourmet</p>
+      <span>R$ 950.000</span>
+      <a href="https://wa.me/5547996730923" class="btn" target="_blank">Tenho interesse</a>
+    </div>
+
+  </div>
 </section>
+
+<section id="sobre" class="sobre">
+  <div class="sobre-container">
+    <img src="558779803_2285900558540379_4670886235901824565_n.jpg" alt="Corretor">
+
+    <div>
+      <h2>Sobre mim</h2>
+      <p>
+        Sou corretor de imóveis em Itajaí focado em ajudar você a encontrar o imóvel ideal com segurança, rapidez e atendimento personalizado.
+      </p>
+
+      <p><strong>📞 WhatsApp:</strong> (47) 99673-0923</p>
+      <p><strong>📍 Região:</strong> Itajaí e região</p>
+      <p><strong>CRECI:</strong> 00000-F</p>
+
+      <a href="https://wa.me/5547996730923" class="btn" target="_blank">
+        Falar comigo
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contato">
+  <form onsubmit="enviarWhats(event)">
+    <h2>Fale comigo</h2>
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu email" required>
+    <textarea placeholder="Mensagem"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<a href="https://wa.me/5547996730923" class="whatsapp" target="_blank">
+  <img src="6c784972cbf5806215d46fbda8b0c46a-removebg-preview.png">
+</a>
+
+<footer>
+  <p>© 2026 Elder Schauffert | Todos os direitos reservados</p>
+
+  <div class="social">
+    <a href="https://www.instagram.com/elder.prime.imoveis/" target="_blank">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.facebook.com/elder.schauffert.2025?locale=pt_BR" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+    </a>
+  </div>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
